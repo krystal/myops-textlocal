@@ -1,7 +1,7 @@
 # MyOps TextLocal Module
 
 This module provides support for sending text messages using [TextLocal](http://textlocal.co.uk)
-in MyOps. To use this in your MyOps installation just follow the instructions below.
+in [MyOps](https://myops.io). To use this in your MyOps installation just follow the instructions below.
 
 ## Installation
 
@@ -13,7 +13,7 @@ modules:
 
 textlocal:
   username: your-tl-username
-  hash: your-tl-api-hash
+  auth_hash: your-tl-api-hash
   sender: SenderName
 ```
 
