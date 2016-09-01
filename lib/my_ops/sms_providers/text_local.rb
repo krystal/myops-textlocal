@@ -11,14 +11,18 @@ module MyOps
       def send_message(recipient, message)
         response = Nifty::Utils::HTTP.post("https://api.txtlocal.com/send/",
           :params => {
-            :username => MyOps.config.textlocal.username,
-            :hash => MyOps.config.textlocal.auth_hash,
-            :sender => MyOps.config.textlocal.sender,
+            :username => self.class.config.username,
+            :hash => self.class.config.auth_hash,
+            :sender => self.class.config.sender,
             :message => message,
             :numbers => recipient
           }
         )
         response[:code] == 200
+      end
+
+      def self.config
+        MyOps.module_config["myops-textlocal"]
       end
 
     end

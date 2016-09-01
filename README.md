@@ -9,12 +9,12 @@ Add `myops-textlocal` plus required configuration to your MyOps configuration fi
 
 ```yaml
 modules:
-  - myops-textlocal
-
-textlocal:
-  username: your-tl-username
-  auth_hash: your-tl-api-hash
-  sender: SenderName
+  -
+    name: myops-textlocal
+    config:
+      username: your-tl-username
+      auth_hash: your-tl-api-hash
+      sender: SenderName
 ```
 
 Once, you've done this you can reinitize the application and restart it.
