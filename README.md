@@ -20,6 +20,6 @@ modules:
 Once, you've done this you can reinitize the application and restart it.
 
 ```
-$ myops reinitialize
+$ myops update-modules
 $ myops restart
 ```
