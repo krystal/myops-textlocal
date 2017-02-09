@@ -39,7 +39,7 @@ module MyOps
       end
 
       def self.logger
-        @logger ||= Logger.new(Rails.root.join('log', 'textlocal.log'))
+        @logger ||= MyOps.logger_for(:textlocal)
       end
 
     end
